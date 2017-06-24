@@ -1,0 +1,65 @@
+body {
+	background-color: black;
+}
+
+#splash-screen {
+	height: 650px;
+	background-color: black;
+}
+
+/* splash screen */
+	#game-name {
+		text-align: center;
+		font-size: 60px;
+	}
+
+	#splash-image {
+		width:  50%;
+	    height: 50%;
+	    object-fit: cover;
+	    object-position: center;
+	}
+
+	#pakc {
+		text-align: center;
+	}
+/* End splash screen */
+
+/* main-menu */
+	#main-menu {
+		display: none;
+		background-color: black;
+		height: 650px;
+	}
+
+	#btn-start {
+		text-align: center;
+	}
+
+	#btn-about {
+		text-align: center;
+	}
+/* end main-menu */
+
+/* about screen */
+	#about-menu {
+		display: none;
+		height: 650px;
+	}
+
+	#developed-by {
+		text-align: center;
+	}
+
+	#btn-back {
+		text-align: center;
+	}
+/* end about screen */
+
+/* level */
+	#level-name {
+		display: none;
+		text-align: center;
+	}
+/* end level */
+

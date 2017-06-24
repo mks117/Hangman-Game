@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Barca</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<style type="text/css" media="screen, print">
+	    @font-face {
+	      font-family: "SPQR";
+	      src: url("assets/fonts/spqr.ttf");
+	    }
+	    
+	    body { 
+	    	font-family: "SPQR", serif;
+			color: lightgray;	
+		}
+  </style>
+  <script type="text/javascript" src="assets/js/game.js"></script>
+</head>
+
+<body>
+	<!-- splash screen -->
+	<div id="splash-screen" class="container" onclick="MainMenu()">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="game-name">BARCA</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<img id="splash-image" class="center-block" src="assets/images/barca.jpg" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="pakc">CLICK TO CONTINUE</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- main menu -->
+	<div id="main-menu" class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="game-name">BARCA</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<img id="splash-image" class="center-block" src="assets/images/barca.jpg" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<h1 id="btn-start">START</h1>
+			</div>
+			<div class="col-xs-6">
+				<h1 id="btn-about" onclick="About()">ABOUT</h1>
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+	<div id="about-menu" class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="game-name">BARCA</h1>
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="developed-by">A GAME DEVELOPED BY <br> MAX SCHMELLING</h1>
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 id="btn-back" onclick="MainMenu()">BACK</h1>
+			</div>			
+		</div>
+	</div>
+
+	<!-- intro -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
