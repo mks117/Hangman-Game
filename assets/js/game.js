@@ -1,5 +1,5 @@
- var levels = ["SIEGE OF SAGUNTUM", "CROSSING THE ALPS", "BATTKE IF ZAMA"];
- var currentLevel = levels[0];
+ var levels = ["SIEGE OF SAGUNTUM", "CROSSING THE ALPS", "BATTLE OF ZAMA"];
+ var currentLevel = 0;
 
  var gameState = ["Playing", "Win", "Loss"];
  var currentGameState = gameState[0];
@@ -8,8 +8,10 @@
  // the value of console.log(army[0][1]); is 50000
 
  var words = ["ZAMA", "SCIPIO", "ELEPHANTRY", "CAVALRY", "INFANTRY", "HISPANIA", "ROME", "CARTHAGE", "HANNIBAL", "ALPS"];
+ var currentWord;
+ var hiddenWord;
  var lettersGuessed = [];
- var wordGuess;
+ var letterGuess;
 
  function MainMenu () {
  	// display main menu
@@ -43,16 +45,19 @@
  	// display intro
  	document.getElementById("intro-screen").style.display = "block";
 
- 	fadeIn(document.getElementById("intro-text-1"), 5000);
- 	setTimeout(function(){ fadeIn(document.getElementById("intro-text-2"), 5000) }, 5000);
- 	setTimeout(function(){ fadeIn(document.getElementById("intro-text-3"), 5000) }, 10000);
- 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
- 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
- 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
- 	setTimeout(function(){ LoadLevel(currentLevel)}, 17500);
+ 	// fadeIn(document.getElementById("intro-text-1"), 5000);
+ 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-2"), 5000) }, 5000);
+ 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-3"), 5000) }, 10000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
+ 	// setTimeout(function(){ LoadLevel(currentLevel)}, 17500);
+
+ 	setTimeout(function(){ LoadLevel(currentLevel)}, 10);
+ 	setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 10); 
 
  	// hide the intro screen
- 	setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 17500); 
+ 	// setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 17500); 
  }
 
  function LoadLevel (_currentLevel) {
@@ -62,7 +67,15 @@
 
  	// load Saguntum
  	if(currentLevel === 0) {
-
+ 		document.getElementById("level-name").innerHTML = levels[0];
+ 		console.log(currentLevel);
+ 		currentWord = randomizeLevelWord(words);
+ 		hideWord(currentWord);
+ 		document.getElementById("level-word").innerHTML = hiddenWord;
+ 		document.getElementById("letters-guessed").innerHTML = "";
+ 		document.getElementById("infantry-count").innerHTML = army[0][1];
+ 		document.getElementById("cavalry-count").innerHTML = army[1][1];
+ 		document.getElementById("elephantry-count").innerHTML = army[2][1];
  	}
 
  	// load Alps
@@ -75,6 +88,49 @@
 
  	}
  }
+
+function randomizeLevelWord (_levelWords) {
+	currentWord = _levelWords[Math.floor(Math.random() * _levelWords.length)];
+	return currentWord;
+}
+
+function hideWord(_currentWord) {
+	hiddenWord = _currentWord;
+	for (var i = 0; i < hiddenWord.length; i++) {
+		hiddenWord = hiddenWord.substring(0, i) + '_' + hiddenWord.substring(i+1);
+	}
+	return hiddenWord;
+}
+
+function guess() {
+	letterGuess = document.getElementById("guess-box").value;
+	letterGuess = letterGuess.toUpperCase();
+	console.log(letterGuess);
+	var correctGuess = false;
+
+	for (var i = 0; i < hiddenWord.length; i++) {
+		if(currentWord[i] === letterGuess) {
+			hiddenWord = hiddenWord.substring(0, i) + letterGuess + hiddenWord.substring(i+1);
+			correctGuess = true;
+		}
+	}
+	console.log(hiddenWord);
+
+	if(!correctGuess) { 
+		wrongGuess() 
+	}
+
+	document.getElementById("letters-guessed").innerHTML += (letterGuess + " ");
+	document.getElementById("level-word").innerHTML = hiddenWord;
+}
+
+function revealChar (_hiddenWord, _currentWord) {
+
+}
+
+function wrongGuess () {
+	// 
+}
 
  function Victory () {
  	// display victory screen

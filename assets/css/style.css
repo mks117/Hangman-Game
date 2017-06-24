@@ -121,12 +121,21 @@ h3 {
 		font-family: "Times New Roman";
 	}
 
-	input {
-		background-color: #333333;
+	#guess-box {
+		background-color: #222222;
 	    object-fit: cover;
 	    object-position: center;
 	    height: 50px;
 	    width: 50px;
+	    font-size: 30px;
+	    text-align: center;
+	}
+
+	#submit-button {
+		margin-top: 10px;
+		background-color: #333333;
+	    object-fit: cover;
+	    object-position: center;
 	    font-size: 30px;
 	    text-align: center;
 	}

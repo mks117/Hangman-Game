@@ -108,7 +108,7 @@
 	<div id="levels-screen" class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1 id="level-name">SAGUNTUM</h1>
+				<h1 id="level-name"></h1>
 			</div>
 		</div>
 		<div class="row">
@@ -119,24 +119,25 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<br><br>
-				<p id="level-word">Z A M A</p>
+				<p id="level-word"></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<input class="center-block" type="text" name="guess" maxlength="1">
+				<input id="guess-box" class="center-block" type="text" name="guess" maxlength="1">
+  				<input id="submit-button" class="center-block" onclick="guess()" type="submit" value="Submit">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-6">
 				<h1>GUESSES</h1>
-				<h1 id="letters-guessed">S P Q R</h1>
+				<h1 id="letters-guessed"></h1>
 			</div>
 			<div class="col-xs-6">
 				<h1>ARMY</h1>
-				<h3>INFANTRY: <span id="infantry-count">50000</span></h3>
-				<h3>CAVALRY: <span id="cavalry-count">9000</span></h3>
-				<h3>ELEPHANTRY: <span id="elephantry-count">37</span></h3>
+				<h3>INFANTRY: <span id="infantry-count"></span></h3>
+				<h3>CAVALRY: <span id="cavalry-count"></span></h3>
+				<h3>ELEPHANTRY: <span id="elephantry-count"></span></h3>
 			</div>
 		</div>
 	</div>
