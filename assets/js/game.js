@@ -49,10 +49,10 @@
  	setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
  	setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
  	setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
- 	setTimeout(function(){ LoadLevel(currentLevel)}, 10);
+ 	setTimeout(function(){ LoadLevel(currentLevel)}, 17500);
 
  	// hide the intro screen
- 	setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 1); 
+ 	//setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 1); 
  }
 
  function LoadLevel (_currentLevel) {
