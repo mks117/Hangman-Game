@@ -52,7 +52,7 @@
  	setTimeout(function(){ LoadLevel(currentLevel)}, 17500);
 
  	// hide the intro screen
- 	//setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 1); 
+ 	setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 17500); 
  }
 
  function LoadLevel (_currentLevel) {
