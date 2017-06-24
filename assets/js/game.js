@@ -1,4 +1,4 @@
- var levels = ["Saguntum", "Alps", "Zama"];
+ var levels = ["SIEGE OF SAGUNTUM", "CROSSING THE ALPS", "BATTKE IF ZAMA"];
  var currentLevel = levels[0];
 
  var gameState = ["Playing", "Win", "Loss"];
@@ -43,12 +43,12 @@
  	// display intro
  	document.getElementById("intro-screen").style.display = "block";
 
- 	// fadeIn(document.getElementById("intro-text-1"), 5000);
- 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-2"), 5000) }, 5000);
- 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-3"), 5000) }, 10000);
- 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
- 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
- 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
+ 	fadeIn(document.getElementById("intro-text-1"), 5000);
+ 	setTimeout(function(){ fadeIn(document.getElementById("intro-text-2"), 5000) }, 5000);
+ 	setTimeout(function(){ fadeIn(document.getElementById("intro-text-3"), 5000) }, 10000);
+ 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
+ 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
+ 	setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
  	setTimeout(function(){ LoadLevel(currentLevel)}, 10);
 
  	// hide the intro screen
