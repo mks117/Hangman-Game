@@ -1,39 +1,79 @@
-  function MainMenu () {
+ var levels = ["Saguntum", "Alps", "Zama"];
+ var currentLevel = levels[0];
+
+ var gameState = ["Playing", "Win", "Loss"];
+ var currentGameState = gameState[0];
+
+ var army = [["Infantry", 50000], ["Cavalry", 9000], ["Elephants", 37]];
+ // the value of console.log(army[0][1]); is 50000
+
+ var words = ["ZAMA", "SCIPIO", "ELEPHANTRY", "CAVALRY", "INFANTRY", "HISPANIA", "ROME", "CARTHAGE", "HANNIBAL", "ALPS"];
+ var lettersGuessed = [];
+ var wordGuess;
+
+ function MainMenu () {
  	// display main menu
- 	console.log("You're in the main menu");
 
  	// hide splash screen elements
  	document.getElementById("splash-screen").style.display = "none";
 
  	// hide about screen elements
- 	document.getElementById("about-menu").style.display = "none" 
+ 	document.getElementById("about-menu").style.display = "none"; 
 
  	// display main menu elements
- 	document.getElementById("main-menu").style.display = "block"
+ 	document.getElementById("main-menu").style.display = "block";
  }
 
  function About () {
  	// display about page
 
  	// hide main menu
- 	document.getElementById("main-menu").style.display = "none"
+ 	document.getElementById("main-menu").style.display = "none";
 
  	// display about menu
- 	document.getElementById("about-menu").style.display = "block" 	
+ 	document.getElementById("about-menu").style.display = "block"; 	
  }
 
  function Intro () {
  	// start game
 
  	// hide main menu
- 	document.getElementById("main-menu").style.display = "none"
+ 	document.getElementById("main-menu").style.display = "none";
 
  	// display intro
+ 	document.getElementById("intro-screen").style.display = "block";
 
+ 	// fadeIn(document.getElementById("intro-text-1"), 5000);
+ 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-2"), 5000) }, 5000);
+ 	// setTimeout(function(){ fadeIn(document.getElementById("intro-text-3"), 5000) }, 10000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-1"), 2500) }, 12000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-2"), 2500) }, 12000);
+ 	// setTimeout(function(){ fadeOut(document.getElementById("intro-text-3"), 2500) }, 15000);
+ 	setTimeout(function(){ LoadLevel(currentLevel)}, 10);
+
+ 	// hide the intro screen
+ 	setTimeout(function(){ document.getElementById("intro-screen").style.display = "none";}, 1); 
  }
 
- function AdvanceLevel () {
- 	// advance to next level
+ function LoadLevel (_currentLevel) {
+ 	// load the current level
+
+ 	document.getElementById("levels-screen").style.display = "block";
+
+ 	// load Saguntum
+ 	if(currentLevel === 0) {
+
+ 	}
+
+ 	// load Alps
+ 	if(currentLevel === 1) {
+
+ 	}
+
+ 	// load Zama
+ 	if(currentLevel === 2) {
+
+ 	}
  }
 
  function Victory () {

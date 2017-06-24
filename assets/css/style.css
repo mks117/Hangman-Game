@@ -2,6 +2,14 @@ body {
 	background-color: black;
 }
 
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
 #splash-screen {
 	height: 650px;
 	background-color: black;
@@ -56,10 +64,71 @@ body {
 	}
 /* end about screen */
 
-/* level */
-	#level-name {
+/* intro screen */
+	#intro-screen {
 		display: none;
 		text-align: center;
+	}
+
+	.intro-text {
+		font-size: 30px;
+	}
+
+	#intro-text-1 {
+		opacity: 0.0;
+	}
+
+	#intro-text-2 {
+		opacity: 0.0;
+	}
+
+	#intro-text-3 {
+		opacity: 0.0;
+	}
+/* intro screen */
+
+/* level */
+	#levels-screen {
+		display: none;
+		background-color: black;
+	}
+
+	#level-name {
+		text-align: center;
+	}
+
+	#level-image {
+		width:  50%;
+	    height: 50%;
+	    object-fit: cover;
+	    object-position: center;
+	}
+
+	#level-word {
+		font-size: 30px;
+		text-align: center;
+	}
+
+	#infantry-count {
+		font-family: "Times New Roman";
+	}
+
+	#cavalry-count {
+		font-family: "Times New Roman";
+	}
+
+	#elephantry-count {
+		font-family: "Times New Roman";
+	}
+
+	input {
+		background-color: #333333;
+	    object-fit: cover;
+	    object-position: center;
+	    height: 50px;
+	    width: 50px;
+	    font-size: 30px;
+	    text-align: center;
 	}
 /* end level */
 
